@@ -1,0 +1,20 @@
+﻿@model CompanyCore.Models.Unit
+
+@{  ViewData["Title"] = "GetUnits";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br/>
+@using (Html.BeginForm("UpdateUnit", "Unit", FormMethod.Post))
+{
+        <b>ID</b>
+    @Html.TextBoxFor(d=>d.UnitID,new {@class="form-control"})
+        <br/>
+
+        <b>Unit Name</b>
+    @Html.TextBoxFor(d=>d.UnitName,new {@class="form-control"})
+        <br/>
+
+         <button class="btn btn-info">Update Unit</button>
+}
+

@@ -1,0 +1,36 @@
+﻿@using CompanyCore.Models;
+@model List<Unit>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Unit</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+
+
+
+    @foreach (var unit in Model)
+    {
+        <tr>
+            <td>@unit.UnitID</td>
+            <td>@unit.UnitName</td>
+            <td><a href="/Unit/DeleteUnit?unitID=@unit.UnitID" class="btn btn-danger">DELETE</a></td>
+            <td><a href="/Unit/GetUnits?unitID=@unit.UnitID" class="btn btn-success">UPDATE</a></td>
+            <td><a href="/Unit/GetUnitDetails?unitID=@unit.UnitID" class="btn btn-info">DETAILS</a></td>
+
+        </tr>
+    }
+</table>
+
+<a href="/Unit/NewUnit" class="btn btn-primary">New Unit</a>
+

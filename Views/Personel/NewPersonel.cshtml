@@ -1,0 +1,27 @@
+﻿@model CompanyCore.Models.Personel;
+@{
+    ViewData["Title"] = "NewPersonel";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br/>
+
+<form class="form-group" method="post">
+
+    <b>Personel Name</b>    
+    @Html.TextBoxFor(d=>d.PersonelName,new {@class="form-control"})
+
+    <b>Personel LastName</b>    
+    @Html.TextBoxFor(d=>d.PersonelLastName,new {@class="form-control"})
+
+    <b>Personel City</b>    
+    @Html.TextBoxFor(d=>d.PersonelCity,new {@class="form-control"})
+    
+    <b>Personel Unit</b>
+    @Html.DropDownListFor(u=>u.Unit.UnitID,(List<SelectListItem>)ViewBag.value,new { @class = "form-control" })
+
+    <br/>
+    <button class="btn btn-info">Add New Personel</button>
+
+</form>
+

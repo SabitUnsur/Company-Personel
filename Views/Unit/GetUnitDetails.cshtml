@@ -1,0 +1,32 @@
+﻿@using CompanyCore.Models;
+@model List<Personel>
+@{
+    ViewData["Title"] = "GetUnitDetails";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<h2>@ViewBag.unitName Department</h2>
+<br/>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+    </tr>
+
+
+
+    @foreach (var personel in Model)
+    {
+        <tr>
+            <td>@personel.PersonelID</td>
+            <td>@personel.PersonelName</td>
+            <td>@personel.PersonelLastName</td>
+            <td>@personel.PersonelCity</td
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,20 @@
+﻿@model CompanyCore.Models.Unit;
+@{
+    ViewData["Title"] = "NewUnit";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br/>
+
+<form class="form-group" method="post">
+
+    @*@Html.LabelFor(d=>d.DepartmentName)*@
+
+    <b>Unit Name</b>    
+    <input type="text" class="form-control" name="UnitName" required="" />
+
+    <br/>
+    <button class="btn btn-info">Add New Unit</button>
+
+</form>
+
